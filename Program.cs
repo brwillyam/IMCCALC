@@ -6,8 +6,8 @@ namespace calculaIMC
     {
         static void Main(string[] args)
         {
-             float peso, altura = 0;
-            double imc = 0;
+            
+            Double imc, altura, peso = 0; 
 
             string nome, sobrenome = "";
 
@@ -15,15 +15,16 @@ namespace calculaIMC
             nome = Console.ReadLine();
             Console.Write("Digite seu sobrenome:");
             sobrenome =Console.ReadLine();
-            Console.WriteLine("Caro Sr(a). : ", nome, " ", sobrenome);
-            Console.Write("Digite seu peso em kilos:");
-            peso = float.Parse(Console.ReadLine());
-            Console.WriteLine(peso);
-            Console.Write("Digite sua altura em metros");
-            altura = float.Parse(Console.ReadLine());
+            Console.WriteLine("Caro Sr(a). : "+ nome +" " + sobrenome);
+            Console.Write("Digite seu peso em kilos:  ");
+            peso = Double.Parse(Console.ReadLine());
+            Console.WriteLine("Seu peso é: " + peso);
+            Console.Write("Digite sua altura em metros: ");
+            altura = Double.Parse(Console.ReadLine());
             Console.WriteLine(altura);
 
             imc = peso / (altura * altura);
+            Console.WriteLine("O IMC é: " + imc.ToString("F2"));
 
             if(imc < 17)
             {
@@ -54,14 +55,9 @@ namespace calculaIMC
             {
                 Console.WriteLine("Voce esta: OBESIDADE MORBIDA");
             }
-
-            float x = 0;
-
-        x = imc - 10;
-        Console.WriteLine("Seu peso ideal deveria ser: ", x);
-
+            
         
-        Console.ReadLine();
+        Console.ReadKey();
 
 
         }
