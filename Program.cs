@@ -21,7 +21,7 @@ namespace calculaIMC
             Console.WriteLine("Seu peso é: " + peso);
             Console.Write("Digite sua altura em metros: ");
             altura = Double.Parse(Console.ReadLine());
-            Console.WriteLine(altura);
+            Console.WriteLine("Sua altura é: " + altura);
 
             imc = peso / (altura * altura);
             Console.WriteLine("O IMC é: " + imc.ToString("F2"));
